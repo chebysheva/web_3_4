@@ -1,0 +1,77 @@
+<meta charset = 'utf-8'>
+<script>
+//4.1
+var user = {
+name: "Джон",
+age: 30
+};
+user.sayHi = function() {
+    alert("Привет!");
+};
+user.sayHi(); 
+
+
+//4.2
+var customer = {
+id: 1,
+name: 'Ivan',
+surname: 'Ivanov',
+age: 20,
+status: 'silver'
+};
+
+alert(customer.id)
+alert(customer.name)
+alert(customer.age)
+
+
+//4.3
+var users = {
+    number: 53,
+    location: 'Russia'
+};
+
+var orders = {
+    number: 76,
+    location: 'Russia'
+};
+
+var restaurants = {
+    number: 14,
+    location: 'Russia'
+};
+  
+
+if (users.location == restaurants.location) {
+    alert(orders.total)
+    
+
+
+//4.4
+
+    function User(name) {
+        this.name = name;
+        this.isAdmin = false;
+    }
+
+    var arr = []
+    var names = ["Екатерина", "Элиза", "Никита", "Настя"]
+    for(i = 0; i < 4; i++){
+        var name = names[Math.round(Math.random()*4)]
+        arr[i] = new User(name)
+        document.write(arr[i].name + ", isAdmin = " + arr[i].isAdmin + "<br>")
+    }
+
+//4.5
+function User(name) {
+    this.name = name;
+
+    this.sayHi = function() {
+        alert( "Меня зовут: " + this.name );
+    };
+}
+
+var vasya = new User("Вася");
+vasya.sayHi(); // Меня зовут: Вася
+}
+</script>
